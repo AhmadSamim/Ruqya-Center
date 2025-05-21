@@ -22,9 +22,9 @@ val Typography = Typography(
     bodyMedium = TextStyle(
         fontFamily = FontFamily(Font(R.font.amiri)),
         fontWeight = FontWeight.Normal,
-        fontSize = 26.sp ,
-        lineHeight = 40.sp,
-        letterSpacing = 5.sp
+        fontSize = 30.sp ,
+        lineHeight = 60.sp,
+        letterSpacing = 8.sp
     ),
     bodySmall = TextStyle(
         fontFamily = FontFamily(Font(R.font.meriiweather)),
