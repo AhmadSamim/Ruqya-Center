@@ -15,23 +15,48 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.sheesha.ruqyacenter.ui.navigation.NavigationRoutes
 
+
+import androidx.compose.foundation.layout.*
+import androidx.compose.ui.Alignment
+
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.sp
+
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun HomeScreen(navController: NavController) {
     Scaffold(
-        topBar = { TopAppBar(title = { Text("Ruqyah Center") }) }
-    ) {paddingValue ->
+        topBar = {
+            TopAppBar(
+                title = {
+                    Text(
+                        text = "Ruqyah Center",
+                        fontSize = 20.sp,
+                        fontWeight = FontWeight.Bold
+                    )
+                }
+            )
+        }
+    ) { paddingValue ->
         Column(
             modifier = Modifier
                 .fillMaxSize()
-                .padding(paddingValue),
-            verticalArrangement = Arrangement.spacedBy(16.dp)
+                .padding(paddingValue)
+                .padding(24.dp),
+            verticalArrangement = Arrangement.spacedBy(24.dp, Alignment.CenterVertically),
+            horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            Button(onClick = { navController.navigate(NavigationRoutes.DahmFahisha.route) }) {
-                Text("Dahm Fahisha Verses")
+            Button(
+                onClick = { navController.navigate(NavigationRoutes.DahmFahisha.route) },
+                modifier = Modifier.fillMaxWidth()
+            ) {
+                Text("🕌 Dahm Fahisha Verses")
             }
-            Button(onClick = { navController.navigate(NavigationRoutes.AynHasad.route) }) {
-                Text("Ayn Hasad Verses")
+            Button(
+                onClick = { navController.navigate(NavigationRoutes.AynHasad.route) },
+                modifier = Modifier.fillMaxWidth()
+            ) {
+                Text("🧿 Ayn Hasad Verses")
             }
         }
     }
