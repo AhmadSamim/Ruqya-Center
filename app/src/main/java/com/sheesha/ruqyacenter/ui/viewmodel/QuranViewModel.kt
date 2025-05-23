@@ -15,7 +15,9 @@ data class QuranUiState(
     val error: String? = null,
     val dahmFahishaAyat: List<AyahResponse> = emptyList(),
     val aynHasadAyat: List<AyahResponse> = emptyList(),
-    val sihrMadfun: List<AyahResponse> = emptyList()
+    val sihrMadfun: List<AyahResponse> = emptyList(),
+    val sihrMakul: List<AyahResponse> = emptyList(),
+
 
 )
 
@@ -81,6 +83,28 @@ class QuranViewModel @Inject constructor(
                     val currentList = _uiState.value.sihrMadfun.toMutableList()
                     currentList.add(response)
                     _uiState.value = _uiState.value.copy(sihrMadfun = currentList)
+                } catch (e: Exception) {
+                    _uiState.value = _uiState.value.copy(
+                        isLoading = false,
+                        error = "Error loading $surah:$ayah — ${e.message}"
+                    )
+                    return@launch
+                }
+            }
+            _uiState.value = _uiState.value.copy(isLoading = false)
+        }
+    }
+
+    fun sihrMakool(verses: List<Pair<Int, Int>>) {
+        _uiState.value = _uiState.value.copy(isLoading = true, error = null, sihrMakul = emptyList())
+
+        viewModelScope.launch {
+            for ((surah, ayah) in verses) {
+                try {
+                    val response = repository.getAyah(surah, ayah)
+                    val currentList = _uiState.value.sihrMakul.toMutableList()
+                    currentList.add(response)
+                    _uiState.value = _uiState.value.copy(sihrMakul = currentList)
                 } catch (e: Exception) {
                     _uiState.value = _uiState.value.copy(
                         isLoading = false,

@@ -8,6 +8,7 @@ import com.sheesha.ruqyacenter.ui.screen.AynHasadScreen
 import com.sheesha.ruqyacenter.ui.screen.DahmFahishaScreen
 import com.sheesha.ruqyacenter.ui.screen.HomeScreen
 import com.sheesha.ruqyacenter.ui.screen.Sihr_Madfun_Verses
+import com.sheesha.ruqyacenter.ui.screen.Sihr_Makul
 import com.sheesha.ruqyacenter.ui.viewmodel.QuranViewModel
 
 @Composable
@@ -31,9 +32,9 @@ fun RuqyaCenterApp(
             AynHasadScreen(viewModel)
         }
 
-        composable(NavigationRoutes.SihrMadfun.route) {
+        composable(NavigationRoutes.SihrMakul.route) {
 
-            Sihr_Madfun_Verses(viewModel)
+            Sihr_Makul(viewModel)
         }
     }
 }

@@ -116,4 +116,33 @@ object VersesRepository {
 
 
 
+    fun Ayat_Sihr_Makul(): List<Pair<Int, Int>> {
+        return listOf(
+            // Al-Fatiha (Full Surah)
+            Pair(1, 1), Pair(1, 2), Pair(1, 3), Pair(1, 4), Pair(1, 5), Pair(1, 6), Pair(1, 7),
+            // Al-Baqara
+            Pair(2, 255), // Ayatul Kursi
+            Pair(2, 102), // Magic verse
+            // Al-A'raf
+            Pair(7, 117), Pair(7, 118), Pair(7, 119), Pair(7, 120), Pair(7, 121), Pair(7, 122),
+            // Al-Hijr
+            Pair(15, 14), Pair(15, 15),
+            // Yunus
+            Pair(10, 81), Pair(10, 82),
+            // Ta-Ha
+            Pair(20, 69),
+            // Ash-Shu'ara
+            Pair(26, 43), Pair(26, 44), Pair(26, 45), Pair(26, 46), Pair(26, 47), Pair(26, 48),
+            // Al-Ikhlas (Full Surah)
+            Pair(112, 1), Pair(112, 2), Pair(112, 3), Pair(112, 4),
+            // Al-Falaq (Full Surah)
+            Pair(113, 1), Pair(113, 2), Pair(113, 3), Pair(113, 4), Pair(113, 5),
+            // An-Nas (Full Surah)
+            Pair(114, 1), Pair(114, 2), Pair(114, 3), Pair(114, 4), Pair(114, 5), Pair(114, 6)
+        )
+    }
+
+
+
+
 }
