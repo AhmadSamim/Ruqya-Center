@@ -58,6 +58,14 @@ fun HomeScreen(navController: NavController) {
             ) {
                 Text("🧿 Ayn Hasad Verses")
             }
+
+            Button(
+                onClick = { navController.navigate(NavigationRoutes.SihrMadfun.route) },
+                modifier = Modifier.fillMaxWidth()
+            ) {
+                Text("🪦 Sihr Madfun Verses")
+
+            }
         }
     }
 }

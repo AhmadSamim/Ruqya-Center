@@ -7,6 +7,7 @@ import androidx.navigation.compose.rememberNavController
 import com.sheesha.ruqyacenter.ui.screen.AynHasadScreen
 import com.sheesha.ruqyacenter.ui.screen.DahmFahishaScreen
 import com.sheesha.ruqyacenter.ui.screen.HomeScreen
+import com.sheesha.ruqyacenter.ui.screen.Sihr_Madfun_Verses
 import com.sheesha.ruqyacenter.ui.viewmodel.QuranViewModel
 
 @Composable
@@ -28,6 +29,11 @@ fun RuqyaCenterApp(
         composable(NavigationRoutes.AynHasad.route) {
 
             AynHasadScreen(viewModel)
+        }
+
+        composable(NavigationRoutes.SihrMadfun.route) {
+
+            Sihr_Madfun_Verses(viewModel)
         }
     }
 }

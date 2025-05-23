@@ -97,5 +97,23 @@ object VersesRepository {
     )
 
 
+    fun Ayat_Sihr_Madfun(): List<Pair<Int, Int>> {
+        return listOf(
+            Pair(9, 84),   // At-Tawba
+            Pair(22, 7),   // Al-Hajj
+            Pair(35, 22),  // Fatir
+            Pair(36, 51),  // Ya-Sin
+            Pair(54, 7),   // Al-Qamar
+            Pair(60, 13),  // Al-Mumtahina
+            Pair(70, 43),  // Al-Ma'arij
+            Pair(77, 26),  // Al-Mursalat
+            Pair(80, 21),  // Abasa
+            Pair(82, 4),   // Al-Infitar
+            Pair(100, 9),  // Al-Adiyat
+            Pair(102, 2)   // At-Takathur
+        )
+    }
+
+
 
 }

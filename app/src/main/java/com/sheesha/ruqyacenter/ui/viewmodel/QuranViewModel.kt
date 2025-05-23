@@ -14,9 +14,10 @@ data class QuranUiState(
     val isLoading: Boolean = false,
     val error: String? = null,
     val dahmFahishaAyat: List<AyahResponse> = emptyList(),
-    val aynHasadAyat: List<AyahResponse> = emptyList()
-)
+    val aynHasadAyat: List<AyahResponse> = emptyList(),
+    val sihrMadfun: List<AyahResponse> = emptyList()
 
+)
 
 @HiltViewModel
 class QuranViewModel @Inject constructor(
@@ -27,14 +28,15 @@ class QuranViewModel @Inject constructor(
     val uiState: StateFlow<QuranUiState> = _uiState
 
     fun fetchDahmFahishaAyat(verses: List<Pair<Int, Int>>) {
-        _uiState.value = _uiState.value.copy(isLoading = true, error = null)
+        _uiState.value = _uiState.value.copy(isLoading = true, error = null, dahmFahishaAyat = emptyList())
 
         viewModelScope.launch {
-            val ayatList = mutableListOf<AyahResponse>()
             for ((surah, ayah) in verses) {
                 try {
                     val response = repository.getAyah(surah, ayah)
-                    ayatList.add(response)
+                    val currentList = _uiState.value.dahmFahishaAyat.toMutableList()
+                    currentList.add(response)
+                    _uiState.value = _uiState.value.copy(dahmFahishaAyat = currentList)
                 } catch (e: Exception) {
                     _uiState.value = _uiState.value.copy(
                         isLoading = false,
@@ -43,22 +45,20 @@ class QuranViewModel @Inject constructor(
                     return@launch
                 }
             }
-            _uiState.value = _uiState.value.copy(
-                isLoading = false,
-                dahmFahishaAyat = ayatList
-            )
+            _uiState.value = _uiState.value.copy(isLoading = false)
         }
     }
 
     fun fetchAynHasadAyat(verses: List<Pair<Int, Int>>) {
-        _uiState.value = _uiState.value.copy(isLoading = true, error = null)
+        _uiState.value = _uiState.value.copy(isLoading = true, error = null, aynHasadAyat = emptyList())
 
         viewModelScope.launch {
-            val ayatList = mutableListOf<AyahResponse>()
             for ((surah, ayah) in verses) {
                 try {
                     val response = repository.getAyah(surah, ayah)
-                    ayatList.add(response)
+                    val currentList = _uiState.value.aynHasadAyat.toMutableList()
+                    currentList.add(response)
+                    _uiState.value = _uiState.value.copy(aynHasadAyat = currentList)
                 } catch (e: Exception) {
                     _uiState.value = _uiState.value.copy(
                         isLoading = false,
@@ -67,10 +67,29 @@ class QuranViewModel @Inject constructor(
                     return@launch
                 }
             }
-            _uiState.value = _uiState.value.copy(
-                isLoading = false,
-                aynHasadAyat = ayatList
-            )
+            _uiState.value = _uiState.value.copy(isLoading = false)
+        }
+    }
+
+    fun SihrMadfun(verses: List<Pair<Int, Int>>) {
+        _uiState.value = _uiState.value.copy(isLoading = true, error = null, sihrMadfun = emptyList())
+
+        viewModelScope.launch {
+            for ((surah, ayah) in verses) {
+                try {
+                    val response = repository.getAyah(surah, ayah)
+                    val currentList = _uiState.value.sihrMadfun.toMutableList()
+                    currentList.add(response)
+                    _uiState.value = _uiState.value.copy(sihrMadfun = currentList)
+                } catch (e: Exception) {
+                    _uiState.value = _uiState.value.copy(
+                        isLoading = false,
+                        error = "Error loading $surah:$ayah — ${e.message}"
+                    )
+                    return@launch
+                }
+            }
+            _uiState.value = _uiState.value.copy(isLoading = false)
         }
     }
 }

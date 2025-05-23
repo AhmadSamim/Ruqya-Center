@@ -6,20 +6,21 @@ import androidx.compose.runtime.collectAsState
 import com.sheesha.ruqyacenter.data.quranapi.VersesRepository
 import com.sheesha.ruqyacenter.ui.viewmodel.QuranViewModel
 
+
 @Composable
-fun AynHasadScreen(viewModel: QuranViewModel) {
+fun Sihr_Madfun_Verses(viewModel: QuranViewModel) {
     val uiState = viewModel.uiState.collectAsState().value
 
     LaunchedEffect(Unit) {
-        viewModel.fetchAynHasadAyat(
-            VersesRepository.aynHasadVerses
+        viewModel.SihrMadfun(
+            VersesRepository.Ayat_Sihr_Madfun()
         )
     }
 
     VerseListScreen(
         title = "Ayn Hasad Verses",
         uiState = uiState,
-        verses = uiState.aynHasadAyat
+        verses = uiState.sihrMadfun
     )
-}
 
+}
