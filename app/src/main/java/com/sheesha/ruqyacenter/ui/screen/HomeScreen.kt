@@ -76,6 +76,16 @@ fun HomeScreen(navController: NavController) {
 
 
             }
+
+
+            Button(
+                onClick = { navController.navigate(NavigationRoutes.JinCatching.route) },
+                modifier = Modifier.fillMaxWidth()
+            ) {
+                Text("🔒 Jinn Catching")
+
+
+            }
         }
     }
 }

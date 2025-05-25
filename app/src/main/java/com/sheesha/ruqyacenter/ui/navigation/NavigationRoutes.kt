@@ -5,5 +5,6 @@ enum class NavigationRoutes(val route: String) {
     DahmFahisha("dahm_fahisha"),
     AynHasad("ayn_hasad"),
     SihrMadfun("sihr_madfun"),
-    SihrMakul("Sihr_Makul")
+    SihrMakul("Sihr_Makul"),
+    JinCatching("Jin_catching")
 }

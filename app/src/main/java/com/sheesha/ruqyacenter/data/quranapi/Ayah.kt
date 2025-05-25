@@ -22,3 +22,12 @@ data class AyahResponse(
     val bengali: String,
     val urdu: String
 )
+
+
+data class JinCatchingVerses(
+    val title: String,
+    val description: String,
+    val verseText: String,
+    val translation: String,
+    val audio: Map<String, AudioItem>
+)

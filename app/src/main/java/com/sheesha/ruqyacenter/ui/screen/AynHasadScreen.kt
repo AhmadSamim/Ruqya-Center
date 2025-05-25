@@ -23,3 +23,5 @@ fun AynHasadScreen(viewModel: QuranViewModel) {
     )
 }
 
+
+

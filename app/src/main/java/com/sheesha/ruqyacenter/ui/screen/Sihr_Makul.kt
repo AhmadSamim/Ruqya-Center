@@ -2,6 +2,7 @@ package com.sheesha.ruqyacenter.ui.screen
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
+import com.sheesha.ruqyacenter.data.quranapi.JinCatchingVerses
 import com.sheesha.ruqyacenter.data.quranapi.VersesRepository
 import com.sheesha.ruqyacenter.ui.viewmodel.QuranViewModel
 
@@ -22,3 +23,5 @@ fun Sihr_Makul(viewModel: QuranViewModel) {
     )
 
 }
+
+
