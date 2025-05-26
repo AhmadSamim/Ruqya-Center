@@ -120,27 +120,67 @@ object VersesRepository {
         return listOf(
             // Al-Fatiha (Full Surah)
             Pair(1, 1), Pair(1, 2), Pair(1, 3), Pair(1, 4), Pair(1, 5), Pair(1, 6), Pair(1, 7),
+
             // Al-Baqara
+            Pair(2, 102), Pair(2, 164), Pair(2, 174),
             Pair(2, 255), // Ayatul Kursi
-            Pair(2, 102), // Magic verse
+            Pair(2, 284), Pair(2, 285), Pair(2, 286),
+
+            // Aal Imran
+            Pair(3, 18), Pair(3, 19),
+
+            // An-Nisa
+            Pair(4, 10),
+
             // Al-A'raf
-            Pair(7, 117), Pair(7, 118), Pair(7, 119), Pair(7, 120), Pair(7, 121), Pair(7, 122),
-            // Al-Hijr
-            Pair(15, 14), Pair(15, 15),
+            Pair(7, 54), Pair(7, 56),
+            Pair(7, 117), Pair(7, 118), Pair(7, 119),
+            Pair(7, 120), Pair(7, 121), Pair(7, 122),
+
+            // At-Tawbah
+            Pair(9, 14),
+
             // Yunus
-            Pair(10, 81), Pair(10, 82),
-            // Ta-Ha
-            Pair(20, 69),
-            // Ash-Shu'ara
-            Pair(26, 43), Pair(26, 44), Pair(26, 45), Pair(26, 46), Pair(26, 47), Pair(26, 48),
+            Pair(10, 79), Pair(10, 80), Pair(10, 81), Pair(10, 82),
+
+            // Ibrahim
+            Pair(14, 17),
+
+            // An-Nahl
+            Pair(16, 69),
+
+            // Al-Kahf
+            Pair(18, 29),
+
+            // Al-Hajj
+            Pair(22, 19), Pair(22, 20), Pair(22, 21), Pair(22, 22),
+
+            // Al-Waqi'ah
+            Pair(56, 51), Pair(56, 52), Pair(56, 53), Pair(56, 54),
+            Pair(56, 55), Pair(56, 56), Pair(56, 57),
+
+            // Ad-Dukhan
+            Pair(44, 43), Pair(44, 44), Pair(44, 45), Pair(44, 46),
+            Pair(44, 47), Pair(44, 48), Pair(44, 49), Pair(44, 50),
+
+            // Muhammad
+            Pair(47, 15),
+
+            // Al-Jinn
+            Pair(72, 1), Pair(72, 2), Pair(72, 3), Pair(72, 4),
+            Pair(72, 5), Pair(72, 6), Pair(72, 7), Pair(72, 8), Pair(72, 9),
+
             // Al-Ikhlas (Full Surah)
             Pair(112, 1), Pair(112, 2), Pair(112, 3), Pair(112, 4),
+
             // Al-Falaq (Full Surah)
             Pair(113, 1), Pair(113, 2), Pair(113, 3), Pair(113, 4), Pair(113, 5),
+
             // An-Nas (Full Surah)
             Pair(114, 1), Pair(114, 2), Pair(114, 3), Pair(114, 4), Pair(114, 5), Pair(114, 6)
         )
     }
+
 
 
     fun Ayat_Jinn_Catching(): List<Pair<Int, Int>> {
