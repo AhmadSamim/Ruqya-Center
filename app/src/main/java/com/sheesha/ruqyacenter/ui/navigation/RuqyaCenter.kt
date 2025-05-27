@@ -11,6 +11,7 @@ import com.sheesha.ruqyacenter.ui.screen.AynHasadScreen
 import com.sheesha.ruqyacenter.ui.screen.DahmFahishaScreen
 import com.sheesha.ruqyacenter.ui.screen.HomeScreen
 import com.sheesha.ruqyacenter.ui.screen.JinCatchingScreen
+import com.sheesha.ruqyacenter.ui.screen.SihrTafreeqScreen
 import com.sheesha.ruqyacenter.ui.screen.Sihr_Madfun_Verses
 import com.sheesha.ruqyacenter.ui.screen.Sihr_Makul
 import com.sheesha.ruqyacenter.ui.viewmodel.QuranViewModel
@@ -55,6 +56,12 @@ fun RuqyaCenterApp(
             }
 
             JinCatchingScreen(title = "JinCatchingVerses",viewModel.jinCatchingVerses.collectAsState().value)
+        }
+
+        composable(NavigationRoutes.SihrTafreeq.route) {
+
+            SihrTafreeqScreen(viewModel)
+
         }
     }
 }

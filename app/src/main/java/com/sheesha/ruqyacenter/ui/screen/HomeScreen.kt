@@ -86,6 +86,15 @@ fun HomeScreen(navController: NavController) {
 
 
             }
+
+            Button(
+                onClick = { navController.navigate(NavigationRoutes.SihrTafreeq.route) },
+                modifier = Modifier.fillMaxWidth()
+            ) {
+                Text("💔 Sihr Tafreeq")
+
+
+            }
         }
     }
 }

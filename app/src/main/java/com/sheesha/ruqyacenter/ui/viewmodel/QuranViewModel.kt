@@ -19,6 +19,7 @@ data class QuranUiState(
     val aynHasadAyat: List<AyahResponse> = emptyList(),
     val sihrMadfun: List<AyahResponse> = emptyList(),
     val sihrMakul: List<AyahResponse> = emptyList(),
+    val sihrTafreeq : List<AyahResponse> = emptyList()
 
 
 )
@@ -150,6 +151,29 @@ class QuranViewModel @Inject constructor(
             }
 
             _jinCatchingVerses.value = enrichedList
+        }
+    }
+
+
+    fun fetchSihrTafreeqVerses(verses: List<Pair<Int, Int>>) {
+        _uiState.value = _uiState.value.copy(isLoading = true, error = null, sihrTafreeq = emptyList())
+
+        viewModelScope.launch {
+            for ((surah, ayah) in verses) {
+                try {
+                    val response = repository.getAyah(surah, ayah)
+                    val currentList = _uiState.value.sihrTafreeq.toMutableList()
+                    currentList.add(response)
+                    _uiState.value = _uiState.value.copy(sihrTafreeq = currentList)
+                } catch (e: Exception) {
+                    _uiState.value = _uiState.value.copy(
+                        isLoading = false,
+                        error = "Error loading $surah:$ayah — ${e.message}"
+                    )
+                    return@launch
+                }
+            }
+            _uiState.value = _uiState.value.copy(isLoading = false)
         }
     }
 

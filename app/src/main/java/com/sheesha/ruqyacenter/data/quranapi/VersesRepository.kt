@@ -297,4 +297,20 @@ object VersesRepository {
         )
     }
 
+    fun Ayat_Sihr_Tafreeq(): List<Pair<Int, Int>> {
+        return listOf(
+            Pair(1, 1), Pair(1, 2), Pair(1, 3), Pair(1, 4), Pair(1, 5), Pair(1, 6), Pair(1, 7), // Surah Fatiha
+            Pair(2, 255), // Ayatul Kursi
+            Pair(2, 102), // Surah Baqarah 102
+            Pair(7, 117), Pair(7, 118), Pair(7, 119), Pair(7, 120), Pair(7, 121), Pair(7, 122), // Surah Araf 117–122
+            Pair(10, 79), Pair(10, 80), Pair(10, 81), Pair(10, 82), // Surah Younus 79–82
+            Pair(20, 69), // Surah Taha 69
+            Pair(42, 43), Pair(42, 44), Pair(42, 45), Pair(42, 46), Pair(42, 47), Pair(42, 48), // Surah Shura 43–48
+            Pair(112, 1), Pair(112, 2), Pair(112, 3), Pair(112, 4), // Surah Ikhlas full
+            Pair(113, 1), Pair(113, 2), Pair(113, 3), Pair(113, 4), Pair(113, 5), // Surah Al-Falaq full
+            Pair(114, 1), Pair(114, 2), Pair(114, 3), Pair(114, 4), Pair(114, 5), Pair(114, 6) // Surah An-Nas full
+        )
+    }
+
+
 }
