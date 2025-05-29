@@ -51,6 +51,131 @@ object VersesRepository {
         )
     }
 
+    fun Ayat_Sihr_Marshosh(): List<Pair<Int, Int>> {
+        return listOf(
+            Pair(1, 1),    // Surah Al-Fatiha (full surah)
+            Pair(2, 255),  // Ayatul Kursi
+            Pair(2, 102),  // Surah Al-Baqara 102
+            Pair(2, 284),  // Surah Al-Baqara 284
+            Pair(2, 285),  // Surah Al-Baqara 285
+            Pair(2, 286),  // Surah Al-Baqara 286
+            Pair(7, 117),  // Surah Al-A'raf 117
+            Pair(7, 118),  // Surah Al-A'raf 118
+            Pair(7, 119),  // Surah Al-A'raf 119
+            Pair(7, 120),  // Surah Al-A'raf 120
+            Pair(7, 121),  // Surah Al-A'raf 121
+            Pair(7, 122),  // Surah Al-A'raf 122
+            Pair(7, 139),  // Surah Al-A'raf 139
+            Pair(10, 79),  // Surah Yunus 79
+            Pair(10, 80),  // Surah Yunus 80
+            Pair(10, 81),  // Surah Yunus 81
+            Pair(10, 82),  // Surah Yunus 82
+            Pair(20, 69),  // Surah Ta-Ha 69
+            Pair(21, 18),  // Surah Al-Anbiya 18
+            Pair(21, 70),  // Surah Al-Anbiya 70
+            Pair(23, 23),  // Surah Al-Furqan 23
+            Pair(37, 98),  // Surah As-Saffat 98
+            Pair(43, 1),   // Surah Az-Zukhruf full surah start
+            Pair(44, 1),   // Surah Ad-Dukhan full surah start
+            Pair(45, 1),   // Surah Al-Jathiya full surah start
+            Pair(46, 1),   // Surah Al-Ahqaf full surah start
+            Pair(47, 1),   // Surah Muhammad full surah start
+            Pair(48, 1),   // Surah Al-Fath full surah start
+            Pair(112, 1),  // Surah Al-Ikhlas full surah start
+            Pair(113, 1),  // Surah Al-Falaq full surah start
+            Pair(114, 1)   // Surah An-Nas full surah start
+        )
+    }
+    
+    fun Ayat_Sihr_Tateel_Zawaj(): List<Pair<Int, Int>> {
+        return listOf(
+            Pair(1, 1), Pair(1, 2), Pair(1, 3), Pair(1, 4), Pair(1, 5), Pair(1, 6), Pair(1, 7), // Al-Fatiha full surah
+            Pair(2, 255),  // Ayatul Kursi
+            Pair(13, 3),   // Ar-Ra'd 3
+            Pair(20, 53),  // Ta-Ha 53
+            Pair(7, 1),    // Al-A‘raf 1
+            Pair(7, 189),  // Al-A‘raf 189
+            Pair(36, 36),  // Ya-Sin 36
+            Pair(51, 49),  // Az-Zariyat 49
+            Pair(53, 45),  // An-Najm 45
+            Pair(30, 21),  // Ar-Rum 21
+            Pair(4, 19),   // An-Nisa 19
+            Pair(66, 4)    // At-Tahrim 4
+        )
+    }
+
+    fun Ayat_Sihr_Maqud(): List<Pair<Int, Int>> {
+        return listOf(
+            // Al-Fatiha full surah
+            Pair(1, 1), Pair(1, 2), Pair(1, 3), Pair(1, 4), Pair(1, 5), Pair(1, 6), Pair(1, 7),
+
+            // Ayatul Kursi
+            Pair(2, 255),
+
+            // Al-Baqarah selected verses
+            Pair(2, 236), Pair(2, 237), Pair(2, 266), Pair(2, 284), Pair(2, 285), Pair(2, 286),
+
+            // Yunus 81
+            Pair(10, 81),
+
+            // Taha 27
+            Pair(20, 27),
+
+            // Al-Furqan 23
+            Pair(25, 23),
+
+            // Al-Waqi’ah 6
+            Pair(56, 6),
+
+            // Al-Hijr 2
+            Pair(15, 2),
+
+            // Az-Zalzalah 2
+            Pair(99, 2),
+
+            // Al-Hashr 2
+            Pair(59, 2),
+
+            // Al-Falaq full surah
+            Pair(113, 1), Pair(113, 2), Pair(113, 3), Pair(113, 4), Pair(113, 5),
+
+            // An-Nas full surah
+            Pair(114, 1), Pair(114, 2), Pair(114, 3), Pair(114, 4), Pair(114, 5), Pair(114, 6)
+        )
+    }
+
+    fun Ayat_Sihr_Rabt(): List<Pair<Int, Int>> {
+        return listOf(
+            // Al-Fatiha full surah
+            Pair(1, 1), Pair(1, 2), Pair(1, 3), Pair(1, 4), Pair(1, 5), Pair(1, 6), Pair(1, 7),
+
+            // Al-Baqarah
+            Pair(2, 102),
+
+            // Al-A’raf 117–122
+            Pair(7, 117), Pair(7, 118), Pair(7, 119),
+            Pair(7, 120), Pair(7, 121), Pair(7, 122),
+
+            // Yunus 81–82
+            Pair(10, 81), Pair(10, 82),
+
+            // Taha 69
+            Pair(20, 69),
+
+            // As-Sajda 7
+            Pair(32, 7),
+
+            // Al-Ikhlas full
+            Pair(112, 1), Pair(112, 2), Pair(112, 3), Pair(112, 4),
+
+            // Al-Falaq full
+            Pair(113, 1), Pair(113, 2), Pair(113, 3), Pair(113, 4), Pair(113, 5),
+
+            // An-Nas full
+            Pair(114, 1), Pair(114, 2), Pair(114, 3), Pair(114, 4), Pair(114, 5), Pair(114, 6)
+        )
+    }
+
 
     val aynHasadVerses = listOf(
         // Al-Baqara
