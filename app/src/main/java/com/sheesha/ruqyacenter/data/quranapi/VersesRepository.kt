@@ -176,6 +176,92 @@ object VersesRepository {
         )
     }
 
+    fun Ayat_Sihr_Mahaba(): List<Pair<Int, Int>> {
+        return listOf(
+            // Surah Al-Fatihah (full surah)
+            Pair(1, 1), Pair(1, 2), Pair(1, 3), Pair(1, 4), Pair(1, 5), Pair(1, 6), Pair(1, 7),
+
+            // Ayatul Kursi
+            Pair(2, 255),
+
+            // Surah Al-Baqarah
+            Pair(2, 30), Pair(2, 168), Pair(2, 169), Pair(2, 205),
+            Pair(2, 219), Pair(2, 220), Pair(2, 221), Pair(2, 222),
+            Pair(2, 275), Pair(2, 286),
+
+            // Surah Aal Imran
+            Pair(3, 14), Pair(3, 119), Pair(3, 135), Pair(3, 197),
+
+            // Surah An-Nisa
+            Pair(4, 16), Pair(4, 22), Pair(4, 25), Pair(4, 77), Pair(4, 95),
+
+            // Surah Al-Ma’idah
+            Pair(5, 33), Pair(5, 41),
+
+            // Surah Al-An’am
+            Pair(6, 151),
+
+            // Surah Al-A’raf
+            Pair(7, 27), Pair(7, 28), Pair(7, 33), Pair(7, 46), Pair(7, 102),
+
+            // Surah Yunus
+            Pair(10, 70),
+
+            // Surah Hud
+            Pair(11, 43), Pair(11, 64), Pair(11, 78),
+
+            // Surah Yusuf
+            Pair(12, 23), Pair(12, 24), Pair(12, 25), Pair(12, 26), Pair(12, 27),
+            Pair(12, 28), Pair(12, 29), Pair(12, 30), Pair(12, 31), Pair(12, 32),
+            Pair(12, 33), Pair(12, 34), Pair(12, 50), Pair(12, 51), Pair(12, 52),
+            Pair(12, 53),
+
+            // Surah Ibrahim
+            Pair(14, 30),
+
+            // Surah Al-Hijr
+            Pair(15, 17),
+
+            // Surah An-Nahl
+            Pair(16, 60),
+
+            // Surah Al-Isra
+            Pair(17, 16), Pair(17, 32), Pair(17, 45),
+
+            // Surah Al-Kahf
+            Pair(18, 95),
+
+            // Surah Maryam
+            Pair(19, 17), Pair(19, 18), Pair(19, 20), Pair(19, 28),
+
+            // Surah Taha
+            Pair(20, 131),
+
+            // Surah Al-Anbiya
+            Pair(21, 74), Pair(21, 91),
+
+            // Surah Al-Mu’minun
+            Pair(23, 5), Pair(23, 6),
+
+            // Surah An-Nur
+            Pair(24, 2), Pair(24, 3), Pair(24, 19), Pair(24, 21),
+            Pair(24, 26), Pair(24, 28), Pair(24, 30), Pair(24, 31), Pair(24, 33),
+
+            // Surah Al-Furqan
+            Pair(25, 53), Pair(25, 68),
+
+            // Surah Ash-Shu‘ara
+            Pair(26, 166), Pair(26, 207), Pair(26, 211),
+
+            // Surah Al-Hajj
+            Pair(22, 19), Pair(22, 22),
+
+            // Surah Ar-Rahman
+            Pair(55, 56), Pair(55, 74)
+        )
+    }
+
+
 
     val aynHasadVerses = listOf(
         // Al-Baqara
