@@ -7,5 +7,10 @@ enum class NavigationRoutes(val route: String) {
     SihrMadfun("sihr_madfun"),
     SihrMakul("Sihr_Makul"),
     JinCatching("Jin_catching"),
-    SihrTafreeq("Sihr_Tafreeq")
+    SihrTafreeq("Sihr_Tafreeq"),
+    SihrRabt("rabt"),
+    SihrMahaba("mahaba"),
+    SihrTateelZawaj("tateel"),
+    SihrMaqud("maqud"),
+    SihrMarshosh("marshosh")
 }

@@ -11,9 +11,14 @@ import com.sheesha.ruqyacenter.ui.screen.AynHasadScreen
 import com.sheesha.ruqyacenter.ui.screen.DahmFahishaScreen
 import com.sheesha.ruqyacenter.ui.screen.HomeScreen
 import com.sheesha.ruqyacenter.ui.screen.JinCatchingScreen
+import com.sheesha.ruqyacenter.ui.screen.MahabaScreen
+import com.sheesha.ruqyacenter.ui.screen.Makud
+import com.sheesha.ruqyacenter.ui.screen.MarshoshScreen
+import com.sheesha.ruqyacenter.ui.screen.Rabt
 import com.sheesha.ruqyacenter.ui.screen.SihrTafreeqScreen
 import com.sheesha.ruqyacenter.ui.screen.Sihr_Madfun_Verses
 import com.sheesha.ruqyacenter.ui.screen.Sihr_Makul
+import com.sheesha.ruqyacenter.ui.screen.TateelAzawaj
 import com.sheesha.ruqyacenter.ui.viewmodel.QuranViewModel
 
 @Composable
@@ -58,10 +63,38 @@ fun RuqyaCenterApp(
             JinCatchingScreen(title = "JinCatchingVerses",viewModel.jinCatchingVerses.collectAsState().value)
         }
 
+        composable(NavigationRoutes.SihrTateelZawaj.route) {
+
+            TateelAzawaj(viewModel)
+
+        }
+
         composable(NavigationRoutes.SihrTafreeq.route) {
 
             SihrTafreeqScreen(viewModel)
 
         }
+        composable(NavigationRoutes.SihrMahaba.route) {
+
+            MahabaScreen(viewModel)
+
+        }
+        composable(NavigationRoutes.SihrMarshosh.route) {
+
+            MarshoshScreen(viewModel)
+
+        }
+        composable(NavigationRoutes.SihrMaqud.route) {
+
+            Makud(viewModel)
+
+        }
+        composable(NavigationRoutes.SihrRabt.route) {
+
+            Rabt(viewModel)
+
+        }
+
+
     }
 }
