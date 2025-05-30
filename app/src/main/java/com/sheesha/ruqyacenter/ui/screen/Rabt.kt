@@ -9,7 +9,7 @@ fun Rabt(viewModel: QuranViewModel) {
     val uiState = viewModel.uiState.collectAsState().value
 
     LaunchedEffect(Unit) {
-        viewModel.fetchAynHasadAyat(
+        viewModel.fetchAyatSihrRabt(
             VersesRepository.Ayat_Sihr_Rabt()
         )
     }

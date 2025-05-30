@@ -9,7 +9,7 @@ fun Makud(viewModel: QuranViewModel) {
     val uiState = viewModel.uiState.collectAsState().value
 
     LaunchedEffect(Unit) {
-        viewModel.fetchAynHasadAyat(
+        viewModel.fetchAyatMaqud(
             VersesRepository.Ayat_Sihr_Maqud()
         )
     }

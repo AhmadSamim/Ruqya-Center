@@ -17,6 +17,8 @@ import com.sheesha.ruqyacenter.ui.navigation.NavigationRoutes
 
 
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.ui.Alignment
 
 import androidx.compose.ui.text.font.FontWeight
@@ -42,8 +44,9 @@ fun HomeScreen(navController: NavController) {
             modifier = Modifier
                 .fillMaxSize()
                 .padding(paddingValue)
+                .verticalScroll(rememberScrollState())
                 .padding(24.dp),
-            verticalArrangement = Arrangement.spacedBy(24.dp, Alignment.CenterVertically),
+            verticalArrangement = Arrangement.spacedBy(24.dp, Alignment.Top),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             Button(
@@ -58,93 +61,60 @@ fun HomeScreen(navController: NavController) {
             ) {
                 Text("🧿 Ayn Hasad Verses")
             }
-
             Button(
                 onClick = { navController.navigate(NavigationRoutes.SihrMadfun.route) },
                 modifier = Modifier.fillMaxWidth()
             ) {
                 Text("🪦 Sihr Madfun Verses")
-
             }
-
-
             Button(
                 onClick = { navController.navigate(NavigationRoutes.SihrMakul.route) },
                 modifier = Modifier.fillMaxWidth()
             ) {
                 Text("🥣 Sihr Makul Verses")
-
-
             }
-
-
             Button(
                 onClick = { navController.navigate(NavigationRoutes.JinCatching.route) },
                 modifier = Modifier.fillMaxWidth()
             ) {
                 Text("🔒 Jinn Catching")
-
-
             }
-
             Button(
                 onClick = { navController.navigate(NavigationRoutes.SihrTafreeq.route) },
                 modifier = Modifier.fillMaxWidth()
             ) {
                 Text("💔 Sihr Tafreeq")
-
-
             }
-
             Button(
                 onClick = { navController.navigate(NavigationRoutes.SihrMarshosh.route) },
                 modifier = Modifier.fillMaxWidth()
             ) {
                 Text("🧴 Sihr Marshosh")
-
-
-
             }
             Button(
                 onClick = { navController.navigate(NavigationRoutes.SihrTateelZawaj.route) },
                 modifier = Modifier.fillMaxWidth()
             ) {
                 Text("💍 Sihr Tateel az Zawaj")
-
-
-
             }
             Button(
                 onClick = { navController.navigate(NavigationRoutes.SihrMahaba.route) },
                 modifier = Modifier.fillMaxWidth()
             ) {
                 Text("❤️ Sihr Mahaba")
-
-
             }
             Button(
                 onClick = { navController.navigate(NavigationRoutes.SihrRabt.route) },
                 modifier = Modifier.fillMaxWidth()
             ) {
                 Text("🪢❤️ Sihr Rabt")
-
-
             }
             Button(
                 onClick = { navController.navigate(NavigationRoutes.SihrMaqud.route) },
                 modifier = Modifier.fillMaxWidth()
             ) {
                 Text("🪢 Sihr Maqud")
-
-
-
             }
-
-
-
-
-
-
         }
     }
 }

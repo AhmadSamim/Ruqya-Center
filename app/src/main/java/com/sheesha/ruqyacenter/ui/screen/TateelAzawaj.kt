@@ -10,7 +10,7 @@ fun TateelAzawaj(viewModel: QuranViewModel) {
     val uiState = viewModel.uiState.collectAsState().value
 
     LaunchedEffect(Unit) {
-        viewModel.fetchAynHasadAyat(
+        viewModel.fetchAyatSihrTateelZawaj(
             VersesRepository.Ayat_Sihr_Tateel_Zawaj()
         )
     }

@@ -10,7 +10,7 @@ fun MahabaScreen(viewModel: QuranViewModel) {
     val uiState = viewModel.uiState.collectAsState().value
 
     LaunchedEffect(Unit) {
-        viewModel.fetchAynHasadAyat(
+        viewModel.fetchAyatSihrMahaba(
             VersesRepository.Ayat_Sihr_Mahaba()
         )
     }

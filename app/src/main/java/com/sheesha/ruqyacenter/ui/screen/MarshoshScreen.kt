@@ -9,7 +9,7 @@ fun MarshoshScreen(viewModel: QuranViewModel) {
     val uiState = viewModel.uiState.collectAsState().value
 
     LaunchedEffect(Unit) {
-        viewModel.fetchAynHasadAyat(
+        viewModel.fetchAyatSihrMarshosh(
             VersesRepository.Ayat_Sihr_Marshosh()
         )
     }
