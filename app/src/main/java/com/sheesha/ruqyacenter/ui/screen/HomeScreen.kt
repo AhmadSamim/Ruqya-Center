@@ -97,34 +97,36 @@ fun HomeScreen(navController: NavController) {
             }
 
             Button(
-                onClick = { navController.navigate(NavigationRoutes.SihrTafreeq.route) },
+                onClick = { navController.navigate(NavigationRoutes.SihrMarshosh.route) },
                 modifier = Modifier.fillMaxWidth()
             ) {
-                Text("💔 Sihr Tafreeq")
+                Text("🧴 Sihr Marshosh")
+
 
 
             }
             Button(
-                onClick = { navController.navigate(NavigationRoutes.SihrTafreeq.route) },
+                onClick = { navController.navigate(NavigationRoutes.SihrTateelZawaj.route) },
                 modifier = Modifier.fillMaxWidth()
             ) {
-                Text("💔 Sihr Tafreeq")
+                Text("💍 Sihr Tateel az Zawaj")
+
 
 
             }
             Button(
-                onClick = { navController.navigate(NavigationRoutes.SihrTafreeq.route) },
+                onClick = { navController.navigate(NavigationRoutes.SihrMahaba.route) },
                 modifier = Modifier.fillMaxWidth()
             ) {
-                Text("💔 Sihr Tafreeq")
+                Text("❤️ Sihr Mahaba")
 
 
             }
             Button(
-                onClick = { navController.navigate(NavigationRoutes.SihrTafreeq.route) },
+                onClick = { navController.navigate(NavigationRoutes.SihrRabt.route) },
                 modifier = Modifier.fillMaxWidth()
             ) {
-                Text("💔 Sihr Tafreeq")
+                Text("🪢❤️ Sihr Rabt")
 
 
             }
@@ -132,7 +134,8 @@ fun HomeScreen(navController: NavController) {
                 onClick = { navController.navigate(NavigationRoutes.SihrMaqud.route) },
                 modifier = Modifier.fillMaxWidth()
             ) {
-                Text("💔 Sihr Maqud")
+                Text("🪢 Sihr Maqud")
+
 
 
             }
