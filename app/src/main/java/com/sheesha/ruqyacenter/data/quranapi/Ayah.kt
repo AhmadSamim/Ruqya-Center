@@ -1,12 +1,17 @@
 package com.sheesha.ruqyacenter.data.quranapi
 
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+
 data class AudioItem(
     val reciter: String,
     val url: String,
     val originalUrl: String
 )
 
+@Entity(tableName = "ayah")
 data class AyahResponse(
+    @PrimaryKey(autoGenerate = true) val id : Int = 0,
     val surahName: String,
     val surahNameArabic: String,
     val surahNameArabicLong: String,
