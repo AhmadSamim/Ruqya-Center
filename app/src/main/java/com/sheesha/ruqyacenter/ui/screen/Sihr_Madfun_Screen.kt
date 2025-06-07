@@ -18,7 +18,7 @@ fun Sihr_Madfun_Verses(viewModel: QuranViewModel) {
     }
 
     VerseListScreen(
-        title = "Ayn Hasad Verses",
+        title = "Madfun",
         uiState = uiState,
         verses = uiState.sihrMadfun
     )

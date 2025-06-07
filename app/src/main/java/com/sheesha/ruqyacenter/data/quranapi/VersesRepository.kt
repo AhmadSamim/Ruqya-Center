@@ -2,6 +2,233 @@ package com.sheesha.ruqyacenter.data.quranapi
 
 object VersesRepository {
 
+    val allAyats: List<Pair<Int, Int>> = listOf(
+        // Surah 1
+        Pair(1, 1), Pair(1, 2), Pair(1, 3), Pair(1, 4), Pair(1, 5), Pair(1, 6), Pair(1, 7),
+
+        // Surah 2
+        Pair(2, 30), Pair(2, 102), Pair(2, 109), Pair(2, 148), Pair(2, 164), Pair(2, 168),
+        Pair(2, 169), Pair(2, 174), Pair(2, 205), Pair(2, 219), Pair(2, 220), Pair(2, 221),
+        Pair(2, 222), Pair(2, 236), Pair(2, 237), Pair(2, 255), Pair(2, 257), Pair(2, 266),
+        Pair(2, 268), Pair(2, 275), Pair(2, 284), Pair(2, 285), Pair(2, 286),
+
+        // Surah 3
+        Pair(3, 14), Pair(3, 18), Pair(3, 19), Pair(3, 26), Pair(3, 61), Pair(3, 119),
+        Pair(3, 135), Pair(3, 197),
+
+        // Surah 4
+        Pair(4, 10), Pair(4, 16), Pair(4, 19), Pair(4, 22), Pair(4, 25), Pair(4, 54),
+        Pair(4, 76), Pair(4, 77), Pair(4, 95), Pair(4, 145),
+
+        // Surah 5
+        Pair(5, 33), Pair(5, 41),
+
+        // Surah 6
+        Pair(6, 13), Pair(6, 151), Pair(6, 162), Pair(6, 163),
+
+        // Surah 7
+        Pair(7, 1), Pair(7, 27), Pair(7, 28), Pair(7, 33), Pair(7, 46), Pair(7, 54),
+        Pair(7, 56), Pair(7, 82), Pair(7, 102), Pair(7, 117), Pair(7, 118), Pair(7, 119),
+        Pair(7, 120), Pair(7, 121), Pair(7, 122), Pair(7, 139), Pair(7, 189), Pair(7, 196),
+
+        // Surah 8
+        Pair(8, 11),
+
+        // Surah 9
+        Pair(9, 1), Pair(9, 14), Pair(9, 15), Pair(9, 84),
+
+        // Surah 10
+        Pair(10, 57), Pair(10, 67), Pair(10, 70), Pair(10, 79), Pair(10, 80), Pair(10, 81),
+        Pair(10, 82),
+
+        // Surah 11
+        Pair(11, 43), Pair(11, 64), Pair(11, 78),
+
+        // Surah 12
+        Pair(12, 23), Pair(12, 24), Pair(12, 25), Pair(12, 26), Pair(12, 27), Pair(12, 28),
+        Pair(12, 29), Pair(12, 30), Pair(12, 31), Pair(12, 32), Pair(12, 33), Pair(12, 34),
+        Pair(12, 50), Pair(12, 51), Pair(12, 52), Pair(12, 53),
+
+        // Surah 13
+        Pair(13, 3),
+
+        // Surah 14
+        Pair(14, 17), Pair(14, 22), Pair(14, 30),
+
+        // Surah 15
+        Pair(15, 2), Pair(15, 17), Pair(15, 21),
+
+        // Surah 16
+        Pair(16, 10), Pair(16, 26), Pair(16, 60), Pair(16, 68), Pair(16, 69),
+
+        // Surah 17
+        Pair(17, 16), Pair(17, 32), Pair(17, 45), Pair(17, 81),
+
+        // Surah 18
+        Pair(18, 29), Pair(18, 39), Pair(18, 95),
+
+        // Surah 19
+        Pair(19, 17), Pair(19, 18), Pair(19, 20), Pair(19, 28),
+
+        // Surah 20
+        Pair(20, 27), Pair(20, 28), Pair(20, 31), Pair(20, 53), Pair(20, 69), Pair(20, 131),
+
+        // Surah 21
+        Pair(21, 18), Pair(21, 30), Pair(21, 69), Pair(21, 70), Pair(21, 74), Pair(21, 91),
+
+        // Surah 22
+        Pair(22, 7), Pair(22, 19), Pair(22, 20), Pair(22, 21), Pair(22, 22),
+
+        // Surah 23
+        Pair(23, 5), Pair(23, 6), Pair(23, 23), Pair(23, 56),
+
+        // Surah 24
+        Pair(24, 2), Pair(24, 3), Pair(24, 19), Pair(24, 21), Pair(24, 26), Pair(24, 28),
+        Pair(24, 30), Pair(24, 31), Pair(24, 33), Pair(24, 35),
+
+        // Surah 25
+        Pair(25, 23), Pair(25, 45), Pair(25, 53), Pair(25, 65), Pair(25, 68),
+
+        // Surah 26
+        Pair(26, 39), Pair(26, 164), Pair(26, 166), Pair(26, 207), Pair(26, 211), Pair(26, 214),
+
+        // Surah 27
+        Pair(27, 30), Pair(27, 31),
+
+        // Surah 30
+        Pair(30, 17), Pair(30, 18), Pair(30, 19), Pair(30, 21), Pair(30, 30), Pair(30, 47),
+
+        // Surah 32
+        Pair(32, 7),
+
+        // Surah 33
+        Pair(33, 3),
+
+        // Surah 35
+        Pair(35, 6), Pair(35, 22), Pair(35, 36), Pair(35, 37), Pair(35, 38),
+
+        // Surah 36
+        Pair(36, 32), Pair(36, 51), Pair(36, 58), Pair(36, 64), Pair(36, 82),
+
+        // Surah 37
+        Pair(37, 24), Pair(37, 25), Pair(37, 26), Pair(37, 92), Pair(37, 98), Pair(37, 158),
+
+        // Surah 38
+        Pair(38, 20),
+
+        // Surah 39
+        Pair(39, 62), Pair(39, 63),
+
+        // Surah 41
+        Pair(41, 21), Pair(41, 44),
+
+        // Surah 42
+        Pair(42, 43), Pair(42, 44), Pair(42, 45), Pair(42, 46), Pair(42, 47), Pair(42, 48),
+
+        // Surah 43
+        Pair(43, 1),
+
+        // Surah 44
+        Pair(44, 1), Pair(44, 43), Pair(44, 44), Pair(44, 45), Pair(44, 46), Pair(44, 47),
+        Pair(44, 48), Pair(44, 49), Pair(44, 50),
+
+        // Surah 45
+        Pair(45, 1),
+
+        // Surah 46
+        Pair(46, 1),
+
+        // Surah 47
+        Pair(47, 1), Pair(47, 15),
+
+        // Surah 48
+        Pair(48, 1), Pair(48, 4),
+
+        // Surah 51
+        Pair(51, 23), Pair(51, 49), Pair(51, 56),
+
+        // Surah 53
+        Pair(53, 45),
+
+        // Surah 54
+        Pair(54, 7),
+
+        // Surah 55
+        Pair(55, 1), Pair(55, 2), Pair(55, 3), Pair(55, 4), Pair(55, 5), Pair(55, 56), Pair(55, 74),
+
+        // Surah 56
+        Pair(56, 6), Pair(56, 51), Pair(56, 52), Pair(56, 53), Pair(56, 54), Pair(56, 55),
+        Pair(56, 56), Pair(56, 57),
+
+        // Surah 59
+        Pair(59, 2), Pair(59, 21),
+
+        // Surah 60
+        Pair(60, 13),
+
+        // Surah 66
+        Pair(66, 4),
+
+        // Surah 67
+        Pair(67, 1), Pair(67, 2), Pair(67, 3), Pair(67, 4),
+
+        // Surah 68
+        Pair(68, 51),
+
+        // Surah 69
+        Pair(69, 30), Pair(69, 31), Pair(69, 32),
+
+        // Surah 70
+        Pair(70, 43),
+
+        // Surah 72
+        Pair(72, 1), Pair(72, 2), Pair(72, 3), Pair(72, 4), Pair(72, 5), Pair(72, 6),
+        Pair(72, 7), Pair(72, 8), Pair(72, 9),
+
+        // Surah 76
+        Pair(76, 4),
+
+        // Surah 77
+        Pair(77, 26),
+
+        // Surah 78
+        Pair(78, 31), Pair(78, 32), Pair(78, 33), Pair(78, 34), Pair(78, 35), Pair(78, 36),
+
+        // Surah 80
+        Pair(80, 21),
+
+        // Surah 82
+        Pair(82, 4),
+
+        // Surah 86
+        Pair(86, 8), Pair(86, 9), Pair(86, 10), Pair(86, 11), Pair(86, 12), Pair(86, 13),
+        Pair(86, 14), Pair(86, 15), Pair(86, 16), Pair(86, 17),
+
+        // Surah 95
+        Pair(95, 4),
+
+        // Surah 99
+        Pair(99, 1), Pair(99, 2),
+
+        // Surah 100
+        Pair(100, 9),
+
+        // Surah 102
+        Pair(102, 2),
+
+        // Surah 112
+        Pair(112, 1), Pair(112, 2), Pair(112, 3), Pair(112, 4),
+
+        // Surah 113
+        Pair(113, 1), Pair(113, 2), Pair(113, 3), Pair(113, 4), Pair(113, 5),
+
+        // Surah 114
+        Pair(114, 1), Pair(114, 2), Pair(114, 3), Pair(114, 4), Pair(114, 5), Pair(114, 6)
+    )
+
+
+
+
     fun Ayat_Dahm_Fahisha(): List<Pair<Int, Int>> {
         return listOf(
             // Al-Fatiha
@@ -525,3 +752,5 @@ object VersesRepository {
 
 
 }
+
+

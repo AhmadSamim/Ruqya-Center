@@ -21,7 +21,7 @@ import com.sheesha.ruqyacenter.ui.viewmodel.QuranUiState
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun VerseListScreen(title: String, uiState: QuranUiState, verses: List<AyahResponse>) {
+fun VerseListScreen(title: String, uiState: QuranUiState, verses: List<AyahResponse?>) {
     Scaffold(
         topBar = { TopAppBar(title = { Text(title) }) }
     ) { padding ->
