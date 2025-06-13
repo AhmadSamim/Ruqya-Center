@@ -96,7 +96,7 @@ If this app benefits you or your community:
 ## 📬 Feedback & Contact
 
 Have suggestions, requests, or Ruqya types you want added?  
-Reach out via GitHub issues or email at **[your-email@example.com]**
+Reach out via GitHub issues or WhatsApp at **93 707 075 705**
 
 ---
 
