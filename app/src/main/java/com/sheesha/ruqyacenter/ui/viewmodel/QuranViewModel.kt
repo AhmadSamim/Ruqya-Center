@@ -1,5 +1,6 @@
 package com.sheesha.ruqyacenter.ui.viewmodel
 
+import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.sheesha.ruqyacenter.data.quranapi.AyahResponse
@@ -8,6 +9,7 @@ import com.sheesha.ruqyacenter.data.quranapi.JinCatchingVerses
 import com.sheesha.ruqyacenter.data.quranapi.VersesRepository
 import com.sheesha.ruqyacenter.repository.QuranRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
@@ -42,6 +44,12 @@ class QuranViewModel @Inject constructor(
     val _jinCatchingVerses = MutableStateFlow<List<JinCatchingVerses>>(emptyList())
     val jinCatchingVerses: StateFlow<List<JinCatchingVerses>> = _jinCatchingVerses
 
+    private val _progress = MutableStateFlow<Float>(0f)
+    var progress: StateFlow<Float> = _progress
+
+    private val _isDownloading = MutableStateFlow<Boolean>(false)
+    val isDownloading: StateFlow<Boolean> = _isDownloading
+
 
     init {
         viewModelScope.launch {
@@ -52,6 +60,10 @@ class QuranViewModel @Inject constructor(
 
     fun getAllAyahtsFromApi(){
         viewModelScope.launch {
+            _isDownloading.value = true
+            val totalAyahs = VersesRepository.allAyats.size
+            var currentAyah = 0
+
             for ((surah , ayah) in VersesRepository.allAyats){
                 try {
                     val response = repository.getAyahFromApi(surah,ayah)
@@ -59,7 +71,11 @@ class QuranViewModel @Inject constructor(
                 } catch (e : Exception){
                     e.printStackTrace()
                 }
+
+                currentAyah++
+                _progress.value = currentAyah.toFloat() / totalAyahs
             }
+            _isDownloading.value = false
         }
     }
 

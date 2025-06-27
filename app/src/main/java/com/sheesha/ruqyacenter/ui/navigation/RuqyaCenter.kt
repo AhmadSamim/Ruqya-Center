@@ -29,7 +29,7 @@ fun RuqyaCenterApp(
     NavHost(navController = navController, startDestination = NavigationRoutes.Home.route) {
 
         composable(NavigationRoutes.Home.route) {
-            HomeScreen(navController)
+            HomeScreen(navController,viewModel)
         }
 
         composable(NavigationRoutes.DahmFahisha.route) {
